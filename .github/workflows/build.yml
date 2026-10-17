@@ -32,15 +32,15 @@ jobs:
       - name: Upload Mod Jar
         uses: actions/upload-artifact@v4
         with:
-          name: zalith-openal-fix-1.0.1
+          name: zalith-openal-fix-1.2.0
           path: build/libs/*.jar
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
         with:
-          tag_name: v1.0.1
-          name: "Zalith OpenAL Fix v1.0.1"
+          tag_name: v1.2.0
+          name: "Zalith OpenAL Fix v1.2.0"
           body: "Automated build of OpenAL Soft system events fix mod for Minecraft 26.1.2 on Android."
           files: build/libs/*.jar
         env:
