@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "me.ebatyvor.openalfix.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "CallbackDeviceTrackerMixin",
+    "SOFTSystemEventsMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

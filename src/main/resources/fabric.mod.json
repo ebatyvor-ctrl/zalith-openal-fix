@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "zalith-openal-fix",
+  "version": "1.0.0",
+  "name": "Zalith OpenAL Fix",
+  "description": "Fixes OpenAL Soft alcEventIsSupportedSOFT NullPointerException in Mojang CallbackDeviceTracker on Android.",
+  "authors": [
+    "ebatyvor-ctrl"
+  ],
+  "license": "MIT",
+  "environment": "client",
+  "mixins": [
+    "zalith-openal-fix.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.15.0"
+  }
+}
