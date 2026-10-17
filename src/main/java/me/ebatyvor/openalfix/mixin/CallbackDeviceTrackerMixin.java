@@ -7,8 +7,8 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(targets = "com.mojang.blaze3d.audio.CallbackDeviceTracker", remap = false)
 public class CallbackDeviceTrackerMixin {
-    @Inject(method = "isSupported", at = @At("HEAD"), cancellable = true, remap = false)
-    private void zalith$disableSystemEvents(long device, CallbackInfoReturnable<Boolean> cir) {
+    @Inject(method = "isSupported()Z", at = @At("HEAD"), cancellable = true, remap = false)
+    private static void zalith$disableSystemEvents(CallbackInfoReturnable<Boolean> cir) {
         cir.setReturnValue(false);
     }
 }
